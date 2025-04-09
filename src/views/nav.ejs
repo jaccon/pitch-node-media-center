@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <!-- Breadcrumb alinhado à esquerda -->
+  <nav aria-label="breadcrumb" class="mb-0">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">Raiz</a></li>
+      <% if (currentPath) { %>
+        <% currentPath.split('/').forEach((part, index) => { %>
+          <% if (part) { %>
+            <li class="breadcrumb-item">
+              <a href="/?path=<%= currentPath.split('/').slice(0, index + 1).join('/') %>"><%= part %></a>
+            </li>
+          <% } %>
+        <% }); %>
+      <% } %>
+    </ol>
+  </nav>
+
+  <!-- Botões de visualização alinhados à direita -->
+  <div class="btn-group" role="group" aria-label="Visualização">
+    <button id="listViewBtn" class="btn btn-outline-light btn-sm">
+      <i class="bi bi-list"></i>
+    </button>
+    <button id="gridViewBtn" class="btn btn-outline-light btn-sm">
+      <i class="bi bi-grid-3x3-gap-fill"></i>
+    </button>
+  </div>
+</div>

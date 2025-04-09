@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  sgix1_node:
+    image: node:18
+    container_name: sgix1_node
+    ports:
+      - "5555:5555"
+    networks:
+      - "hosting"
+    restart: always
+    volumes:
+      - ./src:/usr/src/app
+    working_dir: /usr/src/app
+    command: "npm start" 
+    environment:
+      - NODE_ENV=production
+      - PORT=5555 
+
+networks:
+  hosting:
+    ipam:
+      config:
+      - subnet: 172.16.155.0/24
+        gateway: 172.16.155.1

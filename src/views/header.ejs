@@ -1,0 +1,32 @@
+<!-- Inclua a biblioteca QRCode.js no final do body ou no head -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+<header class="navbar navbar-dark bg-dark p-3 gradient-header">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    
+    <a class="navbar-brand" href="/"> 
+      <img src="/images/logotipo.png" alt="SGIX Media Center" width="200"/>
+    </a>
+
+    <div class="d-flex align-items-center">
+      <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#uploadModal">Upload</button>
+      <button class="btn btn-success me-3" id="createFolderBtn">Criar Pasta</button>
+      
+      <!-- Container do QRCode -->
+      <div id="qrcode" style="width: 64px; height: 64px;"></div>
+    </div>
+    
+  </div>
+</header>
+
+<script>
+  // Gera o QR code com o endereço atual da página
+  new QRCode(document.getElementById("qrcode"), {
+    text: window.location.href,
+    width: 64,
+    height: 64,
+    colorDark: "#ffffff",
+    colorLight: "#1a1a1a",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>

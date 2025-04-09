@@ -1,0 +1,58 @@
+body {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.list-group-item {
+  background-color: #343a40;
+  border-color: #495057;
+}
+
+.list-group-item a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.list-group-item a:hover {
+  color: #0d6efd;
+}
+
+.btn-sm {
+  margin-left: 10px;
+}
+
+.navbar {
+  border-bottom: 1px solid #495057;
+}
+
+.card {
+  transition: transform 0.2s;
+  background-color: #2b3035;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.card-body {
+  padding: 0.8rem;
+}
+
+.card-text small {
+  color: #6c757d;
+}
+
+.gradient-header {
+  background: linear-gradient(to right, #6a11cb, #545454);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
